@@ -140,8 +140,8 @@ async  function sendMessage(){
       <button className={styles.button} onClick={getAllMessages}>get all messages</button>
 
       {
-        waves.map(wave => {
-          return (<div  className={styles.wave}>
+        waves.map((wave,idx) => {
+          return (<div key={idx}  className={styles.wave}>
               <span>sender:<h3>{wave.address}</h3></span>
                  <p>{wave.message}</p>
                  <h3>{wave.timestamp.toString()}</h3>
